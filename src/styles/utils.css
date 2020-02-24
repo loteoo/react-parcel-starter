@@ -1,0 +1,18 @@
+/*------------------------------------*\
+  Shared utility classes
+\*------------------------------------*/
+
+/* Max-width container */
+.container {
+  max-width: 480px;
+  margin: 3rem auto;
+  padding: 1rem;
+}
+
+/* Responsive grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-gap: 1rem;
+  margin: 1rem 0;
+}

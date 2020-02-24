@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "/assets/*": ["src/assets/*"],
+      "/components/*": ["src/components/*"],
+      "/styles/*": ["src/styles/*"],
+      "/utils/*": ["src/utils/*"],
+    },
+    "plugins": [
+      { // See https://github.com/mrmckeb/typescript-plugin-css-modules for more options
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "classnameTransform": "camelCaseOnly",
+          "customMatcher": "\\.(c|le|sa|sc)ss$"
+        }
+      }
+    ]
+  },
+  "include": [
+    "index.d.ts",
+    "src/**/*"
+  ],
+  "exclude": ["node_modules", "public", ".cache"]
+}

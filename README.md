@@ -2,9 +2,7 @@
   React parcel starter
 </h1>
 
-Clean PWA starter with great defaults.
-
-
+Modern starter to quickly build PWAs with a strong focus on developper experience.
 
 ## 🚀 Quick start:
 
@@ -28,6 +26,16 @@ Or use a [.zip download](https://github.com/loteoo/react-parcel-starter/archive/
 
 
 
+## With this, you get:
+- All of [Parcel](https://parceljs.org/)'s power by your side (blazing fast compile, bundling, dev server, hot module reloading...)
+- CSS Modules with TypeScript auto-completion and auto-import of CSS classe names
+- Smart CSS defaults on top of [sanitize.css](https://csstools.github.io/sanitize.css/)
+- No need to `import React` when creating new components
+- Absolute imports (say goodbye to the `../../` hell)
+- [Standard](https://standardjs.com/) JavaScript style guide with a11y and prettier linting
+- TypeScript's excellent type hinting and intellisense without having to write typescript yourself, thanks to the `jsconfig.json` file.
+- Import SVGs inline as React components thanks to svgr
+- Sample PWA manifest
 
 
 
