@@ -1,40 +1,31 @@
-/**
- * Root application component
- */
-import { useState } from 'react'
+import { BrowserRouter, Switch } from 'react-router-dom'
+import { GlobalProvider } from '/components/GlobalContext'
+import Header from '/components/Header'
+import Router from '/components/Router'
 import Footer from '/components/Footer'
+
+// Global styling
 import '/styles/base.css'
+
+// Utility classes
 import utils from '/styles/utils.css'
 
-export default () => {
-  const [state, setState] = useState({
-    a: 1,
-    b: 2
-  })
+// Component classes
+import styles from './style.css'
 
-  const handleInput = ev => {
-    setState({ ...state, [ev.target.name]: parseInt(ev.target.value) })
-  }
-
-  return (
-    <main className={utils.container}>
-      <h1>
-        Parcel + PWAs =&nbsp;
-        <span role="img" aria-label="heart">
-          💖
-        </span>
-      </h1>
-      <div className={utils.grid}>
-        <input type="number" name="a" value={state.a} onChange={handleInput} />
-        <input type="number" name="b" value={state.b} onChange={handleInput} />
-      </div>
-      <h2>
-        {state.a} + {state.b} = {state.a + state.b}
-      </h2>
-      <pre>
-        <code>state: {JSON.stringify(state, null, 2)}</code>
-      </pre>
-      <Footer />
-    </main>
-  )
-}
+// Root component
+export default () => (
+  <GlobalProvider>
+    <BrowserRouter>
+      <Switch>
+        <div className={styles.appContainer}>
+          <Header />
+          <main className={utils.container}>
+            <Router />
+          </main>
+          <Footer />
+        </div>
+      </Switch>
+    </BrowserRouter>
+  </GlobalProvider>
+)

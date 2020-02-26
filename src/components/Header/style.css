@@ -1,0 +1,25 @@
+.container {
+  padding: 3rem 0;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.navigation {
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

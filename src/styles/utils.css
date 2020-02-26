@@ -4,9 +4,9 @@
 
 /* Max-width container */
 .container {
+  width: 90%;
   max-width: 480px;
-  margin: 3rem auto;
-  padding: 1rem;
+  margin: 0 auto;
 }
 
 /* Responsive grid */
@@ -15,4 +15,13 @@
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   grid-gap: 1rem;
   margin: 1rem 0;
+}
+
+/* Stack clickable elements horizontally with a space */
+.buttons-row {
+  display: flex;
+  margin: 1rem 0;
+  > *:not(:last-child) {
+    margin-right: 0.5rem;
+  }
 }
