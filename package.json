@@ -9,28 +9,28 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\""
   },
   "dependencies": {
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-helmet": "^5.2.1",
     "react-router-dom": "^5.1.2",
     "sanitize.css": "^11.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.7",
-    "@babel/preset-env": "^7.7.7",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
     "@svgr/parcel-plugin-svgr": "^5.2.0",
-    "babel-eslint": "^10.0.3",
+    "babel-eslint": "^10.1.0",
     "babel-plugin-jsx-pragmatic": "^1.0.2",
     "eslint": "^6.7.2",
     "eslint-config-babel": "^9.0.0",
     "eslint-config-prettier": "^6.7.0",
-    "eslint-config-standard": "^14.1.0",
+    "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-node": "^9.2.0",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-standard": "^4.0.1",
     "parcel": "^1.12.4",
     "parcel-bundler": "^1.12.4",
@@ -39,8 +39,8 @@
     "postcss-nested": "^4.2.1",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^1.19.1",
-    "typescript": "^3.8.2",
-    "typescript-plugin-css-modules": "^2.1.2"
+    "typescript": "^3.8.3",
+    "typescript-plugin-css-modules": "^2.2.0"
   },
   "license": "MIT",
   "repository": {

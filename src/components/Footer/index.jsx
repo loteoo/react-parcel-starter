@@ -1,6 +1,6 @@
 import Github from '/assets/github.svg'
 import utils from '/styles/utils.css'
-import styles from './style.css'
+import styles from './footer.css'
 
 export default () => (
   <footer className={styles.container}>

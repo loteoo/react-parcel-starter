@@ -35,7 +35,7 @@
 .card {
   color: var(--text-color);
   background-color: var(--alt-background-color);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   padding: 1rem;
   > *:first-child {
     margin-top: 0;
@@ -43,4 +43,9 @@
   > *:last-child {
     margin-bottom: 0;
   }
+}
+
+.alignCenter {
+  text-align: center;
+  justify-content: center;
 }

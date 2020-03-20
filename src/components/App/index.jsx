@@ -11,7 +11,7 @@ import '/styles/base.css'
 import utils from '/styles/utils.css'
 
 // Component classes
-import styles from './style.css'
+import styles from './app.css'
 
 // Root component
 export default () => (
