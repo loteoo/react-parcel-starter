@@ -25,10 +25,29 @@
     > * {
       margin: 0;
       &:not(:last-child) {
-        margin-right: 0.5rem;
+        margin-right: 1rem;
       }
     }
   }
+}
+
+.alignLeft {
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.alignCenter {
+  text-align: center;
+  justify-content: center;
+}
+
+.alignRight {
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.spaceBetween {
+  justify-content: space-around;
 }
 
 /* Common styles for "card" like elements */
@@ -43,9 +62,4 @@
   > *:last-child {
     margin-bottom: 0;
   }
-}
-
-.alignCenter {
-  text-align: center;
-  justify-content: center;
 }

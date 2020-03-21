@@ -4,11 +4,7 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "/assets/*": ["src/assets/*"],
-      "/components/*": ["src/components/*"],
-      "/pages/*": ["src/pages/*"],
-      "/styles/*": ["src/styles/*"],
-      "/utils/*": ["src/utils/*"],
+      "/*": ["src/*"],
     },
     "plugins": [
       { // See https://github.com/mrmckeb/typescript-plugin-css-modules for more options

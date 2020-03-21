@@ -50,6 +50,12 @@ textarea {
   height: auto;
 }
 
+section, .section {
+  padding: 1rem 0;
+  @media (min-width: 420px) {
+    padding: 2rem 0;
+  }
+}
 
 
 /* === Typography === */
@@ -106,6 +112,9 @@ button, .button {
   text-decoration: none;
   color: var(--background-color);
   background-color: var(--text-color);
+  & + & {
+    margin-left: 0.5rem;
+  }
   &:hover {
     opacity: 0.9;
   }
@@ -162,5 +171,3 @@ hr {
   height: 1px;
   background-color: currentColor;
 }
-
-

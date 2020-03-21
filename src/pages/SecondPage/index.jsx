@@ -5,16 +5,14 @@ import utils from '/styles/utils.css'
 
 const Counter = ({ title, count, decrement, increment }) => (
   <div className={`${utils.card} ${utils.alignCenter}`}>
-    <h6>{title}</h6>
+    <small>{title}</small>
     <h2>{count}</h2>
-    <div className={utils.row}>
-      <button type="button" onClick={decrement}>
-        -
-      </button>
-      <button type="button" onClick={increment}>
-        +
-      </button>
-    </div>
+    <button type="button" onClick={decrement}>
+      -
+    </button>
+    <button type="button" onClick={increment}>
+      +
+    </button>
   </div>
 )
 
