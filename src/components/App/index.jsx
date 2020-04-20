@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import { GlobalProvider } from '/components/GlobalContext'
 import Header from '/components/Header'
 import Router from '/components/Router'
@@ -17,15 +17,13 @@ import styles from './app.css'
 export default () => (
   <GlobalProvider>
     <BrowserRouter>
-      <Switch>
-        <div className={styles.appContainer}>
-          <Header />
-          <main className={utils.container}>
-            <Router />
-          </main>
-          <Footer />
-        </div>
-      </Switch>
+      <div className={styles.appContainer}>
+        <Header />
+        <main className={utils.container}>
+          <Router />
+        </main>
+        <Footer />
+      </div>
     </BrowserRouter>
   </GlobalProvider>
 )
