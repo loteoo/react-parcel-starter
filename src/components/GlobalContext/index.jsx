@@ -1,45 +1,28 @@
-import { createContext, useState } from 'react'
+import { createContext, useReducer } from 'react'
+import * as actions from './actions'
+import init from './init'
 
-/**
- * Initial global state
- */
-const init = {
-  count: 0
-}
-
-/**
- * Global context with default values
- * for IDE autocompletion
- */
+// Create context with Initial values (enhances autocompletion)
 const GlobalContext = createContext({
   state: init,
-  actions: {
-    decrement: null,
-    increment: null
-  }
+
+  /**
+   * Enhances the dispatcher to Type-Safe™ one
+   * @type {import('./Dispatcher').default}
+   */
+  dispatch: () => {}
 })
+
+const reducer = (state, [action, payload]) => actions[action](state, payload)
 
 /** Provider component */
 export const GlobalProvider = ({ children }) => {
-  const [state, setState] = useState(init)
-
-  const actions = {
-    decrement: () => {
-      setState({
-        ...state,
-        count: state.count - 1
-      })
-    },
-    increment: () => {
-      setState({
-        ...state,
-        count: state.count + 1
-      })
-    }
-  }
-
+  const [state, realDispatcher] = useReducer(reducer, init)
+  // @ts-ignore
+  // Allow more than 1 param in the dispatch function, pass it as an array to the reducer
+  const dispatch = (...args) => realDispatcher(args)
   return (
-    <GlobalContext.Provider value={{ state, actions }}>
+    <GlobalContext.Provider value={{ state, dispatch }}>
       {children}
     </GlobalContext.Provider>
   )

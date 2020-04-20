@@ -17,7 +17,7 @@ const Counter = ({ title, count, decrement, increment }) => (
 )
 
 export default () => {
-  const { state, actions } = useContext(GlobalContext)
+  const { state, dispatch } = useContext(GlobalContext)
   const [count, setCount] = useState(0)
   const increment = () => setCount(count + 1)
   const decrement = () => setCount(count - 1)
@@ -34,8 +34,8 @@ export default () => {
         <Counter
           title="global state"
           count={state.count}
-          increment={actions.increment}
-          decrement={actions.decrement}
+          increment={() => dispatch('increment')}
+          decrement={() => dispatch('decrement')}
         />
       </div>
     </>
